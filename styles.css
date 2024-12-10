@@ -1,0 +1,98 @@
+:root {
+    --dark-purple: #2C003E;
+    --mystical-purple: #4B0082;
+    --magical-violet: #8A4FFF;
+    --crystal-blue: #6A5ACD;
+    --mystic-black: #1C1C1C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    background-color: var(--mystic-black);
+    color: #E6E6FA;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--dark-purple), var(--mystical-purple));
+    color: #FFF;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.consultants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.consultant-card {
+    background: var(--magical-violet);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.consultant-card:hover {
+    transform: scale(1.05);
+}
+
+.pricing-section {
+    background-color: var(--crystal-blue);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.payment-btn {
+    background-color: var(--dark-purple);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.payment-btn:hover {
+    background-color: var(--mystical-purple);
+}
+
+@media screen and (max-width: 768px) {
+    .consultants-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .payment-btn {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
